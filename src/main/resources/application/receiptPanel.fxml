@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Author: Shuayeb Ahmed -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="10.0" prefHeight="35.0" prefWidth="572.0" text="Purchase Receipt">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      
+      <TableView fx:id="receiptTable" layoutX="15.0" layoutY="55.0" prefHeight="250.0" prefWidth="570.0" />
+      
+      <Label fx:id="receiptTotal" alignment="CENTER" layoutX="15.0" layoutY="310.0" prefHeight="35.0" prefWidth="570.0" text="Total: £0.00" textFill="#1a5490">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      
+      <Button layoutX="16.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToMainPanel" prefHeight="40.0" prefWidth="570.0" text="Return to Main Menu">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

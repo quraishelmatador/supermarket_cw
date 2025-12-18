@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Author: Kouresh Tayabaly -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+    <children>
+        <Button layoutX="306.0" layoutY="102.0" mnemonicParsing="false" onAction="#switchToAddProductPanel" prefHeight="153.0" prefWidth="265.0" text="Add product to system">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="19.0" layoutY="102.0" mnemonicParsing="false" onAction="#switchToAdjustStockPanel" prefHeight="153.0" prefWidth="265.0" text="Modify stock">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="321.0" layoutY="351.0" mnemonicParsing="false" onAction="#switchToMainPanel" prefHeight="18.0" prefWidth="265.0" text="back">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="19.0" layoutY="270.0" mnemonicParsing="false" onAction="#switchToDeleteProductPanel" prefHeight="65.0" prefWidth="265.0" text="Delete Product">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
