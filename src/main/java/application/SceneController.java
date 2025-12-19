@@ -421,8 +421,14 @@ public class SceneController {
                 showStatus(addProductStatus, "Cost cannot be negative!", true);
                 return;
             }
-            if (quantity < 0) {
-                showStatus(addProductStatus, "Quantity cannot be negative!", true);
+            if (quantity <= 0) {
+                showStatus(addProductStatus, "Quantity must be positive!", true);
+                return;
+            }
+
+            // Validate cost is reasonable 
+            if (cost > 10000) {
+                showStatus(addProductStatus, "Cost too high! Maximum is £10,000.", true);
                 return;
             }
 
@@ -470,7 +476,8 @@ public class SceneController {
                 showStatus(stockStatus, "Quantity cannot be negative!", true);
                 return;
             }
-            
+
+            // Validate reasonable quantity
             if (quantity > 10000) {
                 showStatus(stockStatus, "Quantity too large! Maximum is 10,000 units !", true);
                 return;
@@ -494,8 +501,14 @@ public class SceneController {
             String reason = stockReason != null ? stockReason.getText().trim() : "Stock Removed";
 
             // Validate positive quantity
-            if (quantity < 0) {
-                showStatus(stockStatus, "Quantity cannot be negative!", true);
+            if (quantity <= 0) {
+                showStatus(stockStatus, "Quantity must be positive!", true);
+                return;
+            }
+
+            // Validate reasonable quantity
+            if (quantity > 10000) {
+                showStatus(stockStatus, "Quantity too large! Maximum is 10,000 units !", true);
                 return;
             }
 
