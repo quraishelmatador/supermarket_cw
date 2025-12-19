@@ -470,6 +470,11 @@ public class SceneController {
                 showStatus(stockStatus, "Quantity cannot be negative!", true);
                 return;
             }
+            
+            if (quantity > 10000) {
+                showStatus(stockStatus, "Quantity too large! Maximum is 10,000 units !", true);
+                return;
+            }
 
             if (system.addStock(productID, quantity)) {
                 showStatus(stockStatus, "Stock added successfully!", false);
